@@ -1,0 +1,119 @@
+[29-Nov-2023 19:44:28 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:42
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(42): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 42
+[29-Nov-2023 19:44:39 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:42
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(42): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 42
+[29-Nov-2023 19:45:02 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:42
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(42): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 42
+[29-Nov-2023 20:05:45 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:46
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(46): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 46
+[29-Nov-2023 20:07:55 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:46
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(46): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 46
+[29-Nov-2023 20:08:06 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:46
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(46): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 46
+[29-Nov-2023 20:08:26 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:46
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(46): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 46
+[29-Nov-2023 20:08:36 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:46
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(46): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 46
+[29-Nov-2023 20:08:58 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/albuddcz/alburaq1.com/index.php:46
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/index.php(46): number_format()
+#1 {main}
+  thrown in /home/albuddcz/alburaq1.com/index.php on line 46
+[02-Dec-2023 08:53:11 UTC] PHP Warning:  include(include/navbar2.php): Failed to open stream: No such file or directory in /home/albuddcz/alburaq1.com/init.php on line 9
+[02-Dec-2023 08:53:11 UTC] PHP Warning:  include(): Failed opening 'include/navbar2.php' for inclusion (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/albuddcz/alburaq1.com/init.php on line 9
+[02-Dec-2023 08:53:16 UTC] PHP Warning:  include(include/navbar2.php): Failed to open stream: No such file or directory in /home/albuddcz/alburaq1.com/init.php on line 9
+[02-Dec-2023 08:53:16 UTC] PHP Warning:  include(): Failed opening 'include/navbar2.php' for inclusion (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/albuddcz/alburaq1.com/init.php on line 9
+[19-Feb-2024 18:28:54 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 18:28:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/index.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:10:46 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:10:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/index.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:10:59 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:10:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/index.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:11:00 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:11:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/index.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:40:06 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:40:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/index.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:40:38 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[19-Feb-2024 20:40:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/index.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[12-Mar-2024 16:28:44 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[12-Mar-2024 16:28:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/about_transfer.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[12-Mar-2024 16:29:00 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[12-Mar-2024 16:29:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/about_transfer.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[12-Mar-2024 16:29:02 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[12-Mar-2024 16:29:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/about_transfer.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[12-Mar-2024 16:29:03 UTC] PHP Warning:  Undefined variable $connect in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
+[12-Mar-2024 16:29:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/albuddcz/alburaq1.com/include/navbar2.php:3
+Stack trace:
+#0 /home/albuddcz/alburaq1.com/init.php(9): include()
+#1 /home/albuddcz/alburaq1.com/about_transfer.php(4): include('/home/albuddcz/...')
+#2 {main}
+  thrown in /home/albuddcz/alburaq1.com/include/navbar2.php on line 3
