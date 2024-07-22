@@ -78,6 +78,7 @@
                     $serv_title = $indexdata['serv_title'];
                     $last_title = $indexdata['last_title'];
                     $footer_text = $indexdata['footer_text'];
+                    $main_color = $indexdata['main_color'];
 
 
 
@@ -202,6 +203,15 @@
                                         <label for="name"> عنوان الحقوق </label>
                                         <input type="text" class="form-control" name="footer_text" value="<?php echo $footer_text; ?>">
                                     </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="name"> الوان الموقع  </label>
+                                        <input type="color" name="main_color" value="<?php echo $main_color; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name"> رابط موقع للحصول علي افضل الالوان  </label>
+                                        <a target="_blank" href="https://flatuicolors.com/"> الذهاب الي الموقع  </a>
+                                    </div>
                                     <div class="modal-footer">
                                         <button type="submit" name="edit_home" class="btn btn-primary waves-effect waves-light "> حفظ </button>
                                         <button type="button" class="btn btn-default waves-effect " data-dismiss="modal"> رجوع </button>
@@ -243,7 +253,7 @@ if (isset($_POST['edit_home'])) {
         $serv_title = $_POST['serv_title'];
         $last_title = $_POST['last_title'];
         $footer_text = $_POST['footer_text'];
-
+         $main_color = $_POST['main_color'];
         // // update Logo
         if (!empty($_FILES['logo']['name'])) {
             $logo_name = $_FILES['logo']['name'];
@@ -281,13 +291,13 @@ if (isset($_POST['edit_home'])) {
 
         $stmt = $connect->prepare("UPDATE index_page SET top_nav_text=? ,facebook_link=?, whastapp_link=? ,hero_first_title=? ,hero_title=?
                                 ,hero_desc=? ,hero_b_one=? ,hero_b1_link=? ,hero_b_two=? ,hero_b2_link=? ,sec2_title =?,sec2_desc=?
-                                ,sec2_b =?,sec2_b_link=? ,serv_title=? ,last_title=? ,footer_text=?");
+                                ,sec2_b =?,sec2_b_link=? ,serv_title=? ,last_title=? ,footer_text=?,main_color=?");
         $stmt->execute(array(
             $top_nav_text, $facebook_link, $whastapp_link,
             $hero_first_title,  $hero_title, $hero_desc,  $hero_b_one,
             $hero_b1_link,  $hero_b_two, $hero_b2_link,  $sec2_title, $sec2_desc,
             $sec2_b,   $sec2_b_link,
-            $serv_title, $last_title,  $footer_text,
+            $serv_title, $last_title,  $footer_text,$main_color
         ));
         // update section two background
         if (!empty($_FILES['section_two_background']['name'])) {

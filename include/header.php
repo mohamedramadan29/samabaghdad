@@ -1,3 +1,10 @@
+<?php
+$stmt = $connect->prepare("SELECT * FROM index_page");
+$stmt->execute();
+$indexdata = $stmt->fetch();
+$main_color = $indexdata['main_color'];
+
+?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -14,6 +21,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="<?php echo $css ?>main.css">
 
+    <style>
+        *{
+            --main-color: <?php echo $main_color; ?>
+        }
+    </style>
 </head>
+
 
 <body>
