@@ -79,6 +79,8 @@
                     $last_title = $indexdata['last_title'];
                     $footer_text = $indexdata['footer_text'];
                     $main_color = $indexdata['main_color'];
+                    $news_title = $indexdata['news_title'];
+                    $news_desc = $indexdata['news_desc'];
 
 
 
@@ -92,6 +94,14 @@
                                     <div class="form-group">
                                         <label for=""> النص </label>
                                         <input type="text" class="form-control" name="top_nav_text" class="form-control" value="<?php echo $top_nav_text; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for=""> عنوان التنبية  </label>
+                                        <input type="text" class="form-control" name="news_title" class="form-control" value="<?php echo $news_title; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for=""> نص التنبية  </label>
+                                        <input type="text" class="form-control" name="news_desc" class="form-control" value="<?php echo $news_desc; ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="name"> رابط الفيسبوك</label>
@@ -203,14 +213,14 @@
                                         <label for="name"> عنوان الحقوق </label>
                                         <input type="text" class="form-control" name="footer_text" value="<?php echo $footer_text; ?>">
                                     </div>
-                                    
+
                                     <div class="form-group">
-                                        <label for="name"> الوان الموقع  </label>
+                                        <label for="name"> الوان الموقع </label>
                                         <input type="color" name="main_color" value="<?php echo $main_color; ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="name"> رابط موقع للحصول علي افضل الالوان  </label>
-                                        <a target="_blank" href="https://flatuicolors.com/"> الذهاب الي الموقع  </a>
+                                        <label for="name"> رابط موقع للحصول علي افضل الالوان </label>
+                                        <a target="_blank" href="https://flatuicolors.com/"> الذهاب الي الموقع </a>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="submit" name="edit_home" class="btn btn-primary waves-effect waves-light "> حفظ </button>
@@ -253,7 +263,9 @@ if (isset($_POST['edit_home'])) {
         $serv_title = $_POST['serv_title'];
         $last_title = $_POST['last_title'];
         $footer_text = $_POST['footer_text'];
-         $main_color = $_POST['main_color'];
+        $main_color = $_POST['main_color'];
+        $news_title = $_POST['news_title'];
+        $news_desc = $_POST['news_desc'];
         // // update Logo
         if (!empty($_FILES['logo']['name'])) {
             $logo_name = $_FILES['logo']['name'];
@@ -291,13 +303,13 @@ if (isset($_POST['edit_home'])) {
 
         $stmt = $connect->prepare("UPDATE index_page SET top_nav_text=? ,facebook_link=?, whastapp_link=? ,hero_first_title=? ,hero_title=?
                                 ,hero_desc=? ,hero_b_one=? ,hero_b1_link=? ,hero_b_two=? ,hero_b2_link=? ,sec2_title =?,sec2_desc=?
-                                ,sec2_b =?,sec2_b_link=? ,serv_title=? ,last_title=? ,footer_text=?,main_color=?");
+                                ,sec2_b =?,sec2_b_link=? ,serv_title=? ,last_title=? ,footer_text=?,main_color=?,news_title=?,news_desc=?");
         $stmt->execute(array(
             $top_nav_text, $facebook_link, $whastapp_link,
             $hero_first_title,  $hero_title, $hero_desc,  $hero_b_one,
             $hero_b1_link,  $hero_b_two, $hero_b2_link,  $sec2_title, $sec2_desc,
             $sec2_b,   $sec2_b_link,
-            $serv_title, $last_title,  $footer_text,$main_color
+            $serv_title, $last_title,  $footer_text, $main_color,$news_title,$news_desc
         ));
         // update section two background
         if (!empty($_FILES['section_two_background']['name'])) {

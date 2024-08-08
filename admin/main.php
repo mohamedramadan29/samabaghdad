@@ -135,6 +135,8 @@ if (isset($_SESSION['admin_username'])) {
     // START  Confirm Page 
     if ($dir == 'confirm_order_page' && $page == 'edit') {
         include "confirm_order_page/edit.php";
+    }elseif($dir == 'confirm_order_page' && $page == 'western_confrim'){
+        include "confirm_order_page/western_confrim.php";
     }
     //////////// End Confirm Page 
 
@@ -144,6 +146,19 @@ if (isset($_SESSION['admin_username'])) {
     }
     /////////// End Dollar Page 
 
+
+    // START Western
+    if ($dir == 'western' && $page == 'add') {
+        include "western/add.php";
+    } elseif ($dir == 'western' && $page == 'edit') {
+        include "western/edit.php";
+    } elseif ($dir == 'western' && $page == 'delete') {
+        include 'western/delete.php';
+    } elseif ($dir == 'western' && $page == 'report') {
+        include "western/report.php";
+    } elseif ($dir == 'western' && $page == 'print') {
+        include "western/print.php";
+    }
 
     ?>
 

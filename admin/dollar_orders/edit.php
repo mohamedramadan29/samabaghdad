@@ -130,6 +130,10 @@ $order_data = $stmt->fetch();
                                             <label for="passport_image"> صورة تذكرة السفر  <span style="color: red;"> * </span> </label>
                                             <a target="_blank" href="dollar_orders/uploads/<?php echo $order_data['ticket_image'] ?>"> <img width="80px" height="80px" src="dollar_orders/uploads/<?php echo $order_data['ticket_image'] ?>" alt=""> </a>
                                         </div>
+                                        <div class="box">
+                                            <label for="passport_image"> الصورة الشخصية   <span style="color: red;"> * </span> </label>
+                                            <a target="_blank" href="dollar_orders/uploads/<?php echo $order_data['live_image'] ?>"> <img width="80px" height="80px" src="dollar_orders/uploads/<?php echo $order_data['live_image'] ?>" alt=""> </a>
+                                        </div>
                                         <!-- <div class="box">
                                             <label for="id_image_first"> صورة البطاقة الموحدة  <span style="color: red;"> * </span> </label>
                                             <a target="_blank" href="dollar_orders/uploads/<?php echo $order_data['id_image_first'] ?>"> <img width="80px" height="80px" src="dollar_orders/uploads/<?php echo $order_data['id_image_first'] ?>" alt=""> </a>

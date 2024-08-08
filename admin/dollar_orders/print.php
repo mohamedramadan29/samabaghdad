@@ -12,11 +12,18 @@ $travel_to = $order_data['travel_to'];
 $branch = $order_data['where_receieve_dollar'];
 $amount = $order_data['dollar_amount'];
 $order_step = $order_data['step_number'];
+
+$stmt = $connect->prepare("SELECT * FROM index_page");
+$stmt->execute();
+$index_data = $stmt->fetch();
+$main_logo = $index_data['logo'];
 ?>
+
+
 
 <div class="print">
     <div class="data">
-        <img src="../uploads/sama_logo.jpeg" alt="">
+        <img src="home_page/uploads/<?php echo $main_logo; ?>" alt="">
         <div class="info">
             <br>
             <p class="text-center" style="font-weight: bold;"> شراء الدولار لاغراض السفر </p>

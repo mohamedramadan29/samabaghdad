@@ -3,7 +3,7 @@ ob_start();
 session_start();
 include 'init.php';
 
-$stmt = $connect->prepare("SELECT * FROM confirm_page");
+$stmt = $connect->prepare("SELECT * FROM confirm_page_western");
 $stmt->execute();
 $confirm_data =$stmt->fetch();
 $title = $confirm_data['title'];

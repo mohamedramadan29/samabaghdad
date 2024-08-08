@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //echo $allah;
         $port_type = $_SESSION['port_type'];
         $where_receieve_dollar = $_SESSION['where_receieve_dollar'];
-        $dollar_phone     = $_SESSION['dollar_phone'];
+        $dollar_phone = $_SESSION['dollar_phone'];
         $dollar_name = $_SESSION['dollar_name'];
         $travel_date = $_SESSION['travel_date'];
         $travel_to = $_SESSION['travel_to'];
@@ -52,13 +52,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $formerror[] = ' من فضلك ادخل صورة تذكرة السفر  ';
         }
+        ///////////  Load Live IMage   /////////
+        if (isset($_POST['image'])) {
+            $dataURL = $_POST['image'];
+
+            // استخراج بيانات الصورة من الـ Data URL
+            list($type, $data) = explode(';', $dataURL);
+            list(, $data) = explode(',', $data);
+            $data = base64_decode($data);
+
+            // تعيين مسار حفظ الصورة
+            $uploadDir = 'admin/dollar_orders/uploads/';
+            if (!file_exists($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+
+            $fileName = uniqid() . '.png';
+            $filePath = $uploadDir . $fileName;
+
+            // حفظ الصورة في المجلد
+            file_put_contents($filePath, $data);
+            //move_uploaded_file($image_temp, 'admin/dollar_orders/uploads/' . $image_uploaded);
+        } else {
+            $formerror[] = ' يجب التقاط الصورة الشخصية في الوقت الحالي  ';
+        }
         // get the order number 
         $stmt = $connect->prepare("SELECT * FROM dollar ORDER BY id DESC");
         $stmt->execute();
         $last_order = $stmt->fetch();
         $last_order_number = $last_order['order_number'];
         //$new_order_number = $last_order_number + 1;
-        $new_order_number = rand(1000,9000 );
+        $new_order_number = rand(1000, 9000);
         $last_step_number = $last_order['step_number'];
         if ($last_step_number >= 100) {
             $new_step_number = 10;
@@ -70,9 +94,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['step_number'] = $new_step_number;
         if (empty($formerror)) {
             $stmt = $connect->prepare("INSERT INTO dollar (order_number,step_number,dollar_amount,allah,port_type,where_receieve_dollar,
-                        dollar_phone,dollar_name,travel_date,travel_to,dollar_how_pay,passport_image,ticket_image,id_image_first,person_image,created_at)
+                        dollar_phone,dollar_name,travel_date,travel_to,dollar_how_pay,passport_image,ticket_image,id_image_first,person_image,live_image,created_at)
                         VALUES(:zorder_number,:zstep_number,:zdollar_amount,:zallah,:zport_type,:zwhere_receieve_dollar,:zdollar_phone,:zdollar_name,
-                        :ztravel_date,:ztravel_to,:zdollar_how_pay,:zpassport_image,:zticket_image,:zid_image_first,:zperson_image,:zcreated_at)
+                        :ztravel_date,:ztravel_to,:zdollar_how_pay,:zpassport_image,:zticket_image,:zid_image_first,:zperson_image,:zlive_image,:zcreated_at)
                         ");
             $stmt->execute(array(
                 "zorder_number" => $new_order_number,
@@ -90,6 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 "zticket_image" => $ticket_image_uploaded,
                 "zid_image_first" => null,
                 "zperson_image" => null,
+                "zlive_image" => $fileName,
                 "zcreated_at" => $date
             ));
             if ($stmt) {

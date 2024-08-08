@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark"> صفحة تاكيد الطلب  دولار </h1>
+                <h1 class="m-0 text-dark"> صفحة تاكيد الطلب ويسترن </h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="main.php?dir=dashboard&page=dashboard">الرئيسية</a></li>
-                    <li class="breadcrumb-item active"> صفحة تاكيد الطلب دولار </li>
+                    <li class="breadcrumb-item active"> صفحة تاكيد الطلب ويسترن </li>
                 </ol>
             </div>
         </div>
@@ -54,7 +54,7 @@
                     ?>
                     <!-- Get The All Data In the Index Page -->
                     <?php
-                    $stmt = $connect->prepare("SELECT * FROM confirm_page");
+                    $stmt = $connect->prepare("SELECT * FROM confirm_page_western");
                     $stmt->execute();
                     $indexdata = $stmt->fetch();
 
@@ -116,12 +116,12 @@ if (isset($_POST['edit_home'])) {
         $desc1 = $_POST['desc1'];
         $desc2 = $_POST['desc2'];
 
-        $stmt = $connect->prepare("UPDATE confirm_page SET title=?,title2=? ,desc1=?,desc2=?");
+        $stmt = $connect->prepare("UPDATE confirm_page_western SET title=?,title2=? ,desc1=?,desc2=?");
         $stmt->execute(array(
             $title,$title2,$desc1,$desc2
         ));
         if ($stmt) {
-            header('Location:main?dir=confirm_order_page&page=edit');
+            header('Location:main?dir=confirm_order_page&page=western_confrim');
         }
     } catch (\Exception $e) {
         echo $e;

@@ -116,9 +116,6 @@ $western_info_send = $indexdata['western_info_send'];
                             <div class="box">
                                 <label for="amount"> المبلغ<span style="color: red;"> * </span> </label>
                                 <select name="amount" id="amount" class="form-control">
-                                    <option value="200" <?php echo (isset($_SESSION['amount']) && $_SESSION['amount'] == 200) ? 'selected' : ''; ?>>$ 200</option>
-                                    <option value="400" <?php echo (isset($_SESSION['amount']) && $_SESSION['amount'] == 400) ? 'selected' : ''; ?>>$ 400</option>
-                                    <option value="500" <?php echo (isset($_SESSION['amount']) && $_SESSION['amount'] == 500) ? 'selected' : ''; ?>>$ 500</option>
                                     <option value="1000" <?php echo (isset($_SESSION['amount']) && $_SESSION['amount'] == 1000) ? 'selected' : ''; ?>>$ 1000</option>
                                     <option value="2000" <?php echo (isset($_SESSION['amount']) && $_SESSION['amount'] == 2000) ? 'selected' : ''; ?>>$ 2000</option>
                                     <option value="3000" <?php echo (isset($_SESSION['amount']) && $_SESSION['amount'] == 3000) ? 'selected' : ''; ?>>$ 3000</option>
@@ -134,7 +131,8 @@ $western_info_send = $indexdata['western_info_send'];
                             <div class="box">
                                 <label for="transfer_method"> تحويل عبر <span style="color: red;"> * </span> </label>
                                 <select name="transfer_method" id="transfer_method" class="form-control select2">
-                                    <option value="western" <?php echo (isset($_SESSION['transfer_method']) && $_SESSION['transfer_method'] == 'western') ? 'selected' : ''; ?>> ويسترن يونيون </option>
+                                    <option value="ويسترن يونيون" <?php echo (isset($_SESSION['transfer_method']) && $_SESSION['transfer_method'] == 'ويسترن يونيون') ? 'selected' : ''; ?>> ويسترن يونيون </option>
+                                    <option value="موني جرام" <?php echo (isset($_SESSION['transfer_method']) && $_SESSION['transfer_method'] == 'موني جرام') ? 'selected' : ''; ?>>  موني جرام </option>
                                 </select>
                             </div>
                             <div class="paginate_buttons d-flex justify-content-end">
