@@ -183,7 +183,7 @@ $recieve_dollar = $indexdata['recieve_dollar'];
                                 </label>
                                 <input type="file" required name="ticket_image" class="form-control" id="ticket_image">
                             </div>
-                            <div class="box">
+                            <!-- <div class="box">
                                 <label for="ticket_image"> التقاط صورة شخصية <span style="color: red; display: block"> يحب أن تكون الصورة الشخصية مباشرة الآن </span>
                                 </label>
                                 <div>
@@ -201,7 +201,7 @@ $recieve_dollar = $indexdata['recieve_dollar'];
                                         التقاط الصورة <i class="fa fa-trash"></i>
                                     </button>
                                 </div>
-                            </div>
+                            </div> -->
                             <div id="progress-wrapper">
                                 <div id="progress-bar"></div>
                             </div>
@@ -312,7 +312,7 @@ ob_end_flush();
 </script>
 
 
-<style>
+<!-- <style>
     #camera {
         width: 100%;
         max-width: 150px;
@@ -327,47 +327,47 @@ ob_end_flush();
         max-width: 150px;
         max-height: 150px;
     }
-</style>
+</style> -->
 
 
 <script>
-    const video = document.getElementById('camera');
-    const canvas = document.getElementById('snapshot');
-    const context = canvas.getContext('2d');
-    const captureButton = document.getElementById('capture');
-    const preview = document.getElementById('preview');
-    const retakeButton = document.getElementById('retake');
-    const uploadForm = document.getElementById('uploadForm');
-    const imageDataInput = document.getElementById('imageData');
+    // const video = document.getElementById('camera');
+    // const canvas = document.getElementById('snapshot');
+    // const context = canvas.getContext('2d');
+    // const captureButton = document.getElementById('capture');
+    // const preview = document.getElementById('preview');
+    // const retakeButton = document.getElementById('retake');
+    // const uploadForm = document.getElementById('uploadForm');
+    // const imageDataInput = document.getElementById('imageData');
 
-    navigator.mediaDevices.getUserMedia({ video: true })
-        .then(stream => {
-            video.srcObject = stream;
-        })
-        .catch(error => {
-            console.error('Error accessing camera:', error);
-        });
+    // navigator.mediaDevices.getUserMedia({ video: true })
+    //     .then(stream => {
+    //         video.srcObject = stream;
+    //     })
+    //     .catch(error => {
+    //         console.error('Error accessing camera:', error);
+    //     });
 
-    captureButton.addEventListener('click', ($e) => {
-        $e.preventDefault();
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    // captureButton.addEventListener('click', ($e) => {
+    //     $e.preventDefault();
+    //     canvas.width = video.videoWidth;
+    //     canvas.height = video.videoHeight;
+    //     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-        const dataURL = canvas.toDataURL('image/png');
-        preview.src = dataURL;
-        preview.style.display = 'block';
-        imageDataInput.value = dataURL;
-        captureButton.style.display = 'none';
-        retakeButton.style.display = 'block';
-        uploadForm.style.display = 'block';
-    });
+    //     const dataURL = canvas.toDataURL('image/png');
+    //     preview.src = dataURL;
+    //     preview.style.display = 'block';
+    //     imageDataInput.value = dataURL;
+    //     captureButton.style.display = 'none';
+    //     retakeButton.style.display = 'block';
+    //     uploadForm.style.display = 'block';
+    // });
 
-    retakeButton.addEventListener('click', ($e) => {
-        $e.preventDefault();
-        preview.style.display = 'none';
-        captureButton.style.display = 'block';
-        retakeButton.style.display = 'none';
+    // retakeButton.addEventListener('click', ($e) => {
+    //     $e.preventDefault();
+    //     preview.style.display = 'none';
+    //     captureButton.style.display = 'block';
+    //     retakeButton.style.display = 'none';
 
-    });
+    // });
 </script>

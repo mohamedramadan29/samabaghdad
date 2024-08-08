@@ -86,7 +86,6 @@ $western_info_send = $indexdata['western_info_send'];
                 switch ($step) {
                     case 1:
                 ?>
-
                         <form action="westernunion?step=2" method="post" enctype="multipart/form-data">
                             <h6 class="form_title"> بيانات الحوالة </h6>
                             <div class="box">
