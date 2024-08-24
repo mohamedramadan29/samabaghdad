@@ -160,6 +160,28 @@ if (isset($_SESSION['admin_username'])) {
         include "western/print.php";
     }
 
+       // START Request
+       if ($dir == 'requests' && $page == 'add') {
+        include "requests/add.php";
+    } elseif ($dir == 'requests' && $page == 'edit') {
+        include "requests/edit.php";
+    } elseif ($dir == 'requests' && $page == 'delete') {
+        include 'requests/delete.php';
+    } elseif ($dir == 'requests' && $page == 'report') {
+        include "requests/report.php";
+    } elseif ($dir == 'requests' && $page == 'under_report') {
+        include "requests/under_report.php";
+    } elseif ($dir == 'requests' && $page == 'finish_report') {
+        include "requests/finish_report.php";
+    } elseif ($dir == 'requests' && $page == 'print') {
+        include "requests/print.php";
+    } elseif ($dir == 'requests' && $page == 'document') {
+        include "requests/document.php";
+    } elseif ($dir == 'requests' && $page == 'small_print') {
+        include "requests/small_print.php";
+    }
+
+    
     ?>
 
 </div>

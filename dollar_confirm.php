@@ -69,6 +69,14 @@ $desc2 = $confirm_data['desc2'];
                         <th style="color:#27ae60;"> <?php echo $_SESSION['dollar_amount']; ?> دولار </th>
                     </tr>
                     <tr>
+                        <th style="color:#27ae60;"> الاسم  </th>
+                        <th style="color:#27ae60;"> <?php echo $_SESSION['dollar_name']; ?>  </th>
+                    </tr>
+                    <tr>
+                        <th style="color:#27ae60;">تاريخ السفر </th>
+                        <th style="color:#27ae60;"> <?php echo $_SESSION['travel_date']; ?>  </th>
+                    </tr>
+                    <tr>
                         <th style="color:#27ae60;"> حالة الطلب </th>
                         <th style="color:#27ae60;"> بإنتظار الدفع </th>
                     </tr>

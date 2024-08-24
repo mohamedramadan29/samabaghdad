@@ -61,6 +61,13 @@ $website_title = $index_data['hero_title']
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="main.php?dir=requests&page=report" class="nav-link">
+                            <p>
+                                الاستمارات
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="main.php?dir=profile&page=report" class="nav-link">
                             <p>
                                 حسابي
