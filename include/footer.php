@@ -86,7 +86,8 @@
  </div>
  <script src='<?php echo $js; ?>/jquery.min.js'></script>
  <script src='<?php echo $js; ?>/bootstrap.min.js'></script>
- <script src="https://kit.fontawesome.com/588e070751.js" crossorigin="anonymous"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
  <!--  END SLICK  -->
  <script src='<?php echo $js; ?>/main.js'></script>
