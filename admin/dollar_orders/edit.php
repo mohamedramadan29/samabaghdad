@@ -152,6 +152,7 @@ $order_data = $stmt->fetch();
                                             <select name="status" id="status" class="form-control select2">
                                                 <option <?php if ($order_data['order_status'] == 0) echo "selected"; ?> value="0"> بانتظار الدفع </option>
                                                 <option <?php if ($order_data['order_status'] == 1) echo "selected"; ?> value="1"> تم الدفع </option>
+                                                <option <?php if ($order_data['order_status'] == 3) echo "selected"; ?> value="3"> قيد المراجعه </option>
                                                 <option <?php if ($order_data['order_status'] == 2) echo "selected"; ?> value="2"> ملغي </option>
                                             </select>
                                         </div>

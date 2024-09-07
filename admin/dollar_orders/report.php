@@ -102,6 +102,10 @@
                                                 ?>
                                                     <span class="badge badge-success"> تم الدفع </span>
                                                 <?php
+                                                    } elseif ($record['order_status'] == 3) {
+                                                ?>
+                                                    <span class="badge badge-info"> قيد المراجعه </span>
+                                                <?php
                                                     } else {
                                                 ?>
                                                     <span class="badge badge-danger"> ملغي </span>

@@ -145,6 +145,13 @@ $website_title = $index_data['hero_title']
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a href="main.php?dir=tracking_page&page=edit" class="nav-link">
+                            <p>
+                                صفحه متابعه الطلب 
+                            </p>
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a href="logout" class="nav-link" style="color: #e74c3c;">

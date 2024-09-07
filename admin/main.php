@@ -182,6 +182,16 @@ if (isset($_SESSION['admin_username'])) {
     }
 
     
+    // START tracking page
+    if ($dir == 'tracking_page' && $page == 'edit') {
+        include "tracking_page/edit.php";
+    }elseif($dir == 'tracking_page' && $page == 'western_confrim'){
+        include "tracking_page/western_confrim.php";
+    }
+    //////////// End Confirm Page 
+
+
+    
     ?>
 
 </div>

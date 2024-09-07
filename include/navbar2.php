@@ -47,6 +47,9 @@ $news_desc = $indexdata['news_desc'];
                                     <a class="nav-link" id='index_link' aria-current="page" href="index"> الرئيسية </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" id='tracking_order' aria-current="page" href="tracking_order"> متابعه الطلب </a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" id="western_link" href="westernunion"> إرسال الأموال مع WESTERN UNION أونلاين </a>
                                 </li>
                                 <li class="nav-item">
@@ -75,7 +78,7 @@ $news_desc = $indexdata['news_desc'];
                     <span>   إنتباه  </span>
                 </div>
                 <div class="slider_news">
-                    <div class="news"> <?php  echo $news_desc;?> </div>
+                    <div class="news"> <?php echo $news_desc; ?> </div>
                 </div>
             </div> -->
 
@@ -108,6 +111,9 @@ $news_desc = $indexdata['news_desc'];
                 <ul>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index"> الرئيسية </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id='tracking_order' aria-current="page" href="tracking_order"> متابعه الطلب </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="westernunion"> إرسال الأموال مع WESTERN UNION أونلاين </a>
@@ -158,9 +164,7 @@ $news_desc = $indexdata['news_desc'];
 
     }
 
-    .small_screen .top_header .container-fluid {
-
-    }
+    .small_screen .top_header .container-fluid {}
 
     .news_section {
         display: flex;
@@ -169,9 +173,8 @@ $news_desc = $indexdata['news_desc'];
         padding-bottom: 5px;
 
     }
-    .news_section .nots{
-       
-    }
+
+    .news_section .nots {}
 
     .news_section span {
         background-color: red;
@@ -186,7 +189,7 @@ $news_desc = $indexdata['news_desc'];
         overflow: hidden;
         position: relative;
     }
- 
+
 
     .slider_news .news {
         display: inline-block;
