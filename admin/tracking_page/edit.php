@@ -91,9 +91,7 @@ if (isset($_POST['edit_home'])) {
     try {
 
         $desc = $_POST['desc'];
-        
-
-        $stmt = $connect->prepare("UPDATE tracking_page SET desc=?");
+        $stmt = $connect->prepare("UPDATE tracking_page SET `desc` = ? ");
         $stmt->execute(array($desc));
         if ($stmt) {
             header('Location:main?dir=tracking_page&page=edit');
